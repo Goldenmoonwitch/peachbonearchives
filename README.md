@@ -27,3 +27,13 @@ Please **do not redistribute** or reuse content without permission at this time.
 
 📬 For collaboration or questions:  
 **[Insert contact or social here if desired]**
+
+All Rights Reserved.
+
+Peachbone Archives is a creative worldbuilding project curated by The Peachbone Archives Team.
+This includes all written content, original characters, AI-assisted artwork, and custom design.
+
+Until a full open license is published (planned: Creative Commons BY-NC-SA 4.0),
+no part of this project may be reused, modified, or redistributed without explicit permission.
+
+Copyright © 2025 The Peachbone Archives Team.
