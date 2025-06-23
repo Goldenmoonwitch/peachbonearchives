@@ -1,24 +1,20 @@
-.peach {
-  position: absolute;
-  top: 160px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  cursor: pointer;
-  animation: floatPeach 2.5s ease-in-out infinite;
-  transition: top 1s ease-in, left 1s ease-in;
-  z-index: 2;
-  filter: drop-shadow(0 0 6px #ffb6c1);
-}
+function dropPeach(cupId) {
+  const peach = document.querySelector('.peach');
+  const cup = document.getElementById(cupId);
 
-@keyframes floatPeach {
-  0%, 100% {
-    transform: translate(-50%, 0);
+  // Reset animation
+  peach.style.animation = 'none';
+  peach.offsetHeight; // force reflow
+  peach.style.animation = null;
+
+  // Drop effect
+  peach.style.transition = 'top 1s ease-in';
+  peach.style.top = '400px';
+
+  // Highlight cup
+  if (!cup.classList.contains('clicked')) {
+    cup.classList.add('clicked');
   }
-  50% {
-    transform: translate(-50%, -12px);
-  }
+
+  console.log("Peach dropped into:", cupId);
 }
-
-
-
