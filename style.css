@@ -1,0 +1,49 @@
+body {
+  background-color: #0d0612;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.tree-bg {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.peach {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  cursor: pointer;
+  animation: floatPeach 2s infinite ease-in-out;
+  z-index: 2;
+}
+
+@keyframes floatPeach {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -15px); }
+}
+
+.cup-tray {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 4em;
+  z-index: 3;
+}
+
+.cup {
+  width: 100px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.cup.clicked {
+  filter: hue-rotate(160deg);
+  transform: scale(1.1);
+}
