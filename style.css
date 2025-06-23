@@ -7,34 +7,37 @@ body {
   font-family: 'UnifrakturCook', cursive;
   overflow-x: hidden;
   text-align: center;
-  color: #FFD700; /* Rich gold */
-  text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 200, 0, 0.6);
+  animation: textPulse 4s ease-in-out infinite;
 }
 
 h1 {
   font-size: 3em;
   margin-top: 0.5em;
   color: #FFD700;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  text-shadow: 0 0 15px #ffc400, 0 0 25px #ffd700;
+  animation: textPulse 4s ease-in-out infinite;
 }
 
 p {
   font-size: 1.2em;
-  color: #f0c56f;
+  color: #ffdd99;
   margin-bottom: 1.5em;
-  text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+  text-shadow: 0 0 10px #ffcc55;
 }
 
 a {
   color: #ffe37f;
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 0 0 5px #ffcc00;
+  text-shadow: 0 0 8px #ffd84f, 0 0 16px #ffc53d;
+  transition: text-shadow 0.3s ease;
 }
 
 a:hover {
   color: #fff8c3;
-  text-shadow: 0 0 10px #ffcc66;
+  text-shadow: 0 0 20px #ffd677, 0 0 30px #ffb347;
 }
 
 .tree-bg {
@@ -82,4 +85,14 @@ a:hover {
 .cup.clicked {
   filter: hue-rotate(160deg);
   transform: scale(1.1);
+}
+
+/* ✨ Glowing Pulse Effect for Text */
+@keyframes textPulse {
+  0%, 100% {
+    text-shadow: 0 0 8px #ffcc44, 0 0 14px #ffdb66;
+  }
+  50% {
+    text-shadow: 0 0 16px #ffe066, 0 0 28px #fff3b0;
+  }
 }
