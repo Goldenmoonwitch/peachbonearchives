@@ -1,108 +1,49 @@
-/* 🔮 Import Gothic Script Font */
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peachbone Archives</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  background-color: #0d0612;
-  margin: 0;
-  padding: 0;
-  font-family: 'UnifrakturCook', cursive;
-  overflow-x: hidden;
-  text-align: center;
-  color: #FFD700;
-}
+  <h1>Welcome to the Peachbone Archives</h1>
+  <p>This is your gateway to multi-realm madness.</p>
 
-h1, p, a, .cup-title {
-  animation: textPulse 4s ease-in-out infinite;
-  text-shadow:
-    0 0 5px #ffcc00,
-    0 0 10px #ffd700,
-    0 0 20px #fff38a;
-}
+  <!-- 🌳 Background Scene -->
+  <img src="fairy-tree.png" alt="Magical Peach Tree" class="tree-bg">
 
-h1 {
-  font-size: 3em;
-  margin-top: 0.5em;
-}
+  <!-- 🍑 Floating Peach -->
+  <img src="peach.png" class="peach" onclick="dropPeach('hasher')" alt="Peach">
 
-p {
-  font-size: 1.2em;
-  margin-bottom: 1.5em;
-}
+  <!-- 🫖 Realm Cups (Side-by-Side) -->
+  <div class="cup-tray">
+    <!-- Soft Gods -->
+    <div class="cup-column">
+      <a href="realms/soft-gods/index.html">
+        <img src="evil-cup.png" class="cup" id="softgods" alt="Evil Cup">
+      </a>
+      <div class="cup-title">Soft Gods Die Laughter</div>
+    </div>
 
-a {
-  color: #ffe37f;
-  text-decoration: none;
-  font-weight: bold;
-  transition: text-shadow 0.3s ease;
-}
+    <!-- Dollhouse -->
+    <div class="cup-column">
+      <a href="realms/dollhouse/index.html">
+        <img src="sad-cup.png" class="cup" id="dollhouse" alt="Sad Cup">
+      </a>
+      <div class="cup-title">The Dollhouse Widow</div>
+    </div>
 
-a:hover {
-  color: #fff8c3;
-  text-shadow: 0 0 20px #ffd677, 0 0 30px #ffb347;
-}
+    <!-- Hasherverse -->
+    <div class="cup-column">
+      <a href="realms/hasher/index.html">
+        <img src="happy-cup.png" class="cup" id="hasher" alt="Happy Cup">
+      </a>
+      <div class="cup-title">Hasherverse</div>
+    </div>
+  </div>
 
-.tree-bg {
-  width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  z-index: 0;
-  position: relative;
-}
-
-.peach {
-  position: absolute;
-  top: 160px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  cursor: pointer;
-  animation: floatPeach 2.5s ease-in-out infinite;
-  transition: top 1s ease-in, left 1s ease-in;
-  z-index: 2;
-  filter: drop-shadow(0 0 6px #ffb6c1);
-}
-
-@keyframes floatPeach {
-  0%, 100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, -12px);
-  }
-}
-
-/* 🫖 Cup Layout */
-.cup-tray {
-  display: flex;
-  justify-content: center;
-  gap: 3em; /* More spacing between cups */
-  margin-top: 4em;
-  z-index: 3;
-  flex-wrap: wrap;
-}
-
-.cup-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 120px;
-}
-
-.cup {
-  width: 70px;          /* Smaller cups */
-  max-width: 80px;
-  transition: transform 0.3s, filter 0.3s;
-}
-
-.cup.clicked {
-  filter: hue-rotate(160deg);
-  transform: scale(1.1);
-}
-
-.cup-title {
-  margin-top: 0.3em;
-  font-size: 1em;
-  color: #FFD700;
-  font-family: 'UnifrakturCook', cursi
-
+  <script src="script.js"></script>
+</body>
+</html>
 
