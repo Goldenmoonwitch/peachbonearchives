@@ -47,3 +47,25 @@ body {
   filter: hue-rotate(160deg);
   transform: scale(1.1);
 }
+/* ✨ Floating Animation for the Peach */
+.peach {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  cursor: pointer;
+  animation: floatPeach 2.5s ease-in-out infinite;
+  z-index: 2;
+  filter: drop-shadow(0 0 6px #ffb6c1);
+}
+
+/* 🍃 Keyframes to make it bob gently */
+@keyframes floatPeach {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -12px);
+  }
+}
