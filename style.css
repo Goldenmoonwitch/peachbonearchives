@@ -58,4 +58,51 @@ a:hover {
   cursor: pointer;
   animation: floatPeach 2.5s ease-in-out infinite;
   transition: top 1s ease-in, left 1s ease-in;
+  z-index: 2;
+  filter: drop-shadow(0 0 6px #ffb6c1);
+}
+
+@keyframes floatPeach {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -12px);
+  }
+}
+
+/* 🫖 Cup Layout */
+.cup-tray {
+  display: flex;
+  justify-content: center;
+  gap: 3em; /* More spacing between cups */
+  margin-top: 4em;
+  z-index: 3;
+  flex-wrap: wrap;
+}
+
+.cup-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 120px;
+}
+
+.cup {
+  width: 70px;          /* Smaller cups */
+  max-width: 80px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.cup.clicked {
+  filter: hue-rotate(160deg);
+  transform: scale(1.1);
+}
+
+.cup-title {
+  margin-top: 0.3em;
+  font-size: 1em;
+  color: #FFD700;
+  font-family: 'UnifrakturCook', cursi
+
 
