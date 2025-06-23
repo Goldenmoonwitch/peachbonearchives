@@ -1,49 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Peachbone Archives</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* 🔮 Gothic Font */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 
-  <h1>Welcome to the Peachbone Archives</h1>
-  <p>This is your gateway to multi-realm madness.</p>
+body {
+  background-color: #0d0612;
+  margin: 0;
+  padding: 0;
+  font-family: 'UnifrakturCook', cursive;
+  overflow-x: hidden;
+  text-align: center;
+  color: #FFD700;
+}
 
-  <!-- 🌳 Background Scene -->
-  <img src="fairy-tree.png" alt="Magical Peach Tree" class="tree-bg">
+h1, p, a, .cup-title {
+  animation: textPulse 4s ease-in-out infinite;
+  text-shadow:
+    0 0 5px #ffcc00,
+    0 0 10px #ffd700,
+    0 0 20px #fff38a;
+}
 
-  <!-- 🍑 Floating Peach -->
-  <img src="peach.png" class="peach" onclick="dropPeach('hasher')" alt="Peach">
+h1 {
+  font-size: 3em;
+  margin-top: 0.5em;
+}
 
-  <!-- 🫖 Realm Cups (Side-by-Side) -->
-  <div class="cup-tray">
-    <!-- Soft Gods -->
-    <div class="cup-column">
-      <a href="realms/soft-gods/index.html">
-        <img src="evil-cup.png" class="cup" id="softgods" alt="Evil Cup">
-      </a>
-      <div class="cup-title">Soft Gods Die Laughter</div>
-    </div>
+p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
 
-    <!-- Dollhouse -->
-    <div class="cup-column">
-      <a href="realms/dollhouse/index.html">
-        <img src="sad-cup.png" class="cup" id="dollhouse" alt="Sad Cup">
-      </a>
-      <div class="cup-title">The Dollhouse Widow</div>
-    </div>
+a {
+  color: #ffe37f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: text-shadow 0.3s ease;
+}
 
-    <!-- Hasherverse -->
-    <div class="cup-column">
-      <a href="realms/hasher/index.html">
-        <img src="happy-cup.png" class="cup" id="hasher" alt="Happy Cup">
-      </a>
-      <div class="cup-title">Hasherverse</div>
-    </div>
-  </div>
+a:hover {
+  color: #fff8c3;
+  text-shadow: 0 0 20px #ffd677, 0 0 30px #ffb347;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.tree-bg {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+}
+
+.peach {
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  cursor: pointer;
+  animation: floatPeach 2.5s ease-in-out infinite;
+  transition: top 1s ease-in;
+  z-index: 2;
+  filter: drop-shadow(0 0 6px #ffb6c1);
+}
+
+@keyframes floatPeach {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -15px); }
+}
+
+.cup-tray {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3em;
+  flex-wrap: wrap;
+  margin-top: 3em;
+  padding-bottom: 4em;
+  z-index: 3;
+}
+
+.cup-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 130px;
+}
+
+.cup {
+  width: 80px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.cup.clicked {
+  filter: hue-rotate(160deg);
+  transform: scale(1.1);
+}
+
+.cup-title {
+  margin-top: 0.5em;
+  font-size: 1em;
+  color: #FFD700;
+  font-family: 'UnifrakturCook', cursive;
+  text-shadow: 0 0 8px #ffc400, 0 0 14px #ffd700;
+  animation: textPulse 4s ease-in-out infinite;
+}
+
+/* ✨ Text Glow Animation */
+@keyframes textPulse {
+  0%, 100% {
+    text-shadow: 0 0 6px #ffc400, 0 0 12px #ffd700;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff38a, 0 0 20px #ffe066;
+  }
+}
 
