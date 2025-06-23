@@ -11,7 +11,7 @@ body {
   color: #FFD700;
 }
 
-h1, p, a {
+h1, p, a, .cup-title {
   animation: textPulse 4s ease-in-out infinite;
   text-shadow:
     0 0 5px #ffcc00,
@@ -46,6 +46,7 @@ a:hover {
   max-height: 600px;
   object-fit: cover;
   z-index: 0;
+  position: relative;
 }
 
 .peach {
@@ -76,6 +77,14 @@ a:hover {
   gap: 2em;
   margin-top: 4em;
   z-index: 3;
+  flex-wrap: wrap;
+}
+
+.cup-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
 }
 
 .cup {
@@ -88,6 +97,15 @@ a:hover {
   transform: scale(1.1);
 }
 
+.cup-title {
+  margin-top: 0.5em;
+  font-size: 1.1em;
+  color: #FFD700;
+  font-family: 'UnifrakturCook', cursive;
+  text-shadow: 0 0 8px #ffc400, 0 0 14px #ffd700;
+  text-align: center;
+}
+
 /* ✨ Text Pulse Glow Animation */
 @keyframes textPulse {
   0%, 100% {
@@ -97,19 +115,7 @@ a:hover {
     text-shadow: 0 0 10px #fff38a, 0 0 20px #ffe066;
   }
 }
-
-.cup-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 150px;
-}
-
-.cup-title {
-  margin-top: 0.5em;
-  font-size: 1em;
-  color: #FFD700;
-  font-family: 'UnifrakturCook', cursive;
+, cursive;
   text-shadow: 0 0 8px #ffc400, 0 0 14px #ffd700;
   animation: textPulse 4s ease-in-out infinite;
 }
