@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-/* General Page Styling */
+/* General Page Layout */
 body {
   background: #000;
   color: #fff;
   display: flex;
-  flex-direction: column; /* allow vertical stacking */
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
-/* Glitchstab Text Block */
+/* Top Glitch Title Block */
+.glitchstab {
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+}
+
 .glitchstab h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem; /* Reduced from 4rem */
+  font-size: 2rem;
   letter-spacing: 0.1rem;
   color: #fff;
-  text-align: center;
   animation: flicker 3s infinite;
   text-shadow:
     0 0 4px #ff00cc,
@@ -27,10 +31,27 @@ body {
     0 0 12px #00ffff,
     0 0 16px #ff00cc,
     0 0 24px #00ffff;
-  margin: 1em 0;
+  margin-bottom: 1.5em;
 }
 
-/* Optional animated drip effect */
+/* Centered ID Card */
+.agent-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-bottom: 2em;
+}
+
+.agent-card img {
+  max-width: 90%;
+  height: auto;
+  border: 2px solid #ff00cc;
+  box-shadow: 0 0 12px #00ffff;
+  border-radius: 8px;
+}
+
+/* Drip effect */
 .drip::after {
   content: '';
   position: absolute;
@@ -47,14 +68,12 @@ body {
   animation: drip 2s infinite ease-in-out;
 }
 
-/* Drip animation */
 @keyframes drip {
   0% { height: 0; opacity: 0; }
   50% { height: 20px; opacity: 1; }
   100% { height: 0; opacity: 0; }
 }
 
-/* Flicker animation */
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     opacity: 1;
@@ -63,4 +82,3 @@ body {
     opacity: 0.4;
   }
 }
-
