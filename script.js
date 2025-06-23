@@ -6,7 +6,7 @@
   width: 80px;
   cursor: pointer;
   animation: floatPeach 2.5s ease-in-out infinite;
-  transition: top 1s ease-in;
+  transition: top 1s ease-in, left 1s ease-in;
   z-index: 2;
   filter: drop-shadow(0 0 6px #ffb6c1);
 }
@@ -19,5 +19,6 @@
     transform: translate(-50%, -12px);
   }
 }
+
 
 
