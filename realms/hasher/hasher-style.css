@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
+/* Page Base Layout */
 body {
   background: #000;
   color: #fff;
@@ -13,10 +14,12 @@ body {
   position: relative;
 }
 
+/* Main Text */
 .glitchstab {
   font-size: 3rem;
   letter-spacing: 0.1rem;
   text-align: center;
+  position: relative;
   animation: flicker 3s infinite;
   text-shadow:
     0 0 5px #e75480,
@@ -26,10 +29,12 @@ body {
     0 0 80px #e75480;
 }
 
+/* Drip Effect */
 .drip {
   position: relative;
   display: inline-block;
 }
+
 .drip::after {
   content: '';
   position: absolute;
@@ -46,6 +51,7 @@ body {
   animation: drip 2s infinite ease-in-out;
 }
 
+/* Candy Image Styling */
 .side-image {
   position: absolute;
   left: 20px;
@@ -54,15 +60,18 @@ body {
 }
 
 .side-image img {
-  width: 100px;
+  width: 120px;
+  height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
+  filter: brightness(1.5) saturate(1.2) contrast(1.3);
 }
 
 .side-image img:hover {
   transform: scale(1.1);
 }
 
+/* Animations */
 @keyframes drip {
   0% { height: 0; opacity: 0; }
   50% { height: 20px; opacity: 1; }
@@ -70,6 +79,10 @@ body {
 }
 
 @keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 24%, 55% { opacity: 0.4; }
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
 }
