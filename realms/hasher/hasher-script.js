@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Hasherverse loaded.");
+  const candy = document.getElementById("candyImage");
+  const sound = document.getElementById("hoverSound");
 
-  const candyIcon = document.getElementById("candy-icon");
-  const hoverAudio = document.getElementById("hover-audio");
-
-  if (candyIcon && hoverAudio) {
-    candyIcon.addEventListener("mouseenter", () => {
-      hoverAudio.currentTime = 0;
-      hoverAudio.play();
+  if (candy && sound) {
+    candy.addEventListener("mouseenter", () => {
+      sound.currentTime = 0;
+      sound.play();
     });
 
-    candyIcon.addEventListener("mouseleave", () => {
-      hoverAudio.pause();
-      hoverAudio.currentTime = 0;
+    candy.addEventListener("mouseleave", () => {
+      sound.pause();
+      sound.currentTime = 0;
     });
   }
 });
