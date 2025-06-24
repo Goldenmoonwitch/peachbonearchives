@@ -1,23 +1,20 @@
+// hasher-script.js
+
 document.addEventListener("DOMContentLoaded", () => {
-  const candyImage = document.getElementById("hasher-icon");
-  const themeAudio = document.getElementById("hasher-audio");
+  console.log("Hasherverse script loaded.");
 
-  if (candyImage && themeAudio) {
-    // Play audio on hover
-    candyImage.addEventListener("mouseenter", () => {
-      themeAudio.currentTime = 0;
-      themeAudio.play();
+  const title = document.querySelector(".glitchstab");
+
+  if (title) {
+    title.addEventListener("mouseover", () => {
+      title.style.textShadow =
+        "0 0 5px #ff00cc, 0 0 15px #00ffff, 0 0 25px #ff00cc, 0 0 35px #00ffff";
     });
 
-    // Stop audio on mouse leave
-    candyImage.addEventListener("mouseleave", () => {
-      themeAudio.pause();
-      themeAudio.currentTime = 0;
-    });
-
-    // Open hasher site on click (replace with your link)
-    candyImage.addEventListener("click", () => {
-      window.location.href = "/realms/hasher/index.html";
+    title.addEventListener("mouseout", () => {
+      title.style.textShadow =
+        "0 0 5px #e75480, 0 0 10px #ff69b4, 0 0 20px #e75480, 0 0 40px #ff69b4, 0 0 80px #e75480";
     });
   }
 });
+
