@@ -36,10 +36,48 @@ body {
   position: absolute;
   left: 50%;
   top: 100%;
+  transfor@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+body {
+  background: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+}
+
+.glitchstab {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  animation: flicker 3s infinite;
+  text-shadow:
+    0 0 5px #e75480,
+    0 0 10px #ff69b4,
+    0 0 20px #e75480,
+    0 0 40px #ff69b4,
+    0 0 80px #e75480;
+}
+
+.drip {
+  position: relative;
+  display: inline-block;
+}
+
+.drip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
   transform: translateX(-50%);
   width: 6px;
   height: 20px;
-  background: #e75480;
+  background: #e75480; /* Pink Rose */
   box-shadow:
     0 0 8px #ff69b4,
     0 0 16px #e75480;
