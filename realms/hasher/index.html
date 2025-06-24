@@ -2,25 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>GlitchStab Grotesque</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>Welcome to the Hasherverse</title>
   <link rel="stylesheet" href="hasher-style.css" />
   <script src="hasher-script.js" defer></script>
 </head>
 <body>
 
-  <!-- Hover Audio -->
-  <audio id="hoverAudio" src="hasher-theme.mp3" preload="auto"></audio>
-
-  <!-- Candy Image on Side -->
+  <!-- Candy Image with Hover Audio -->
   <div class="side-image">
-    <img src="Hasherchainsawcandy.png"
-         alt="Candy"
-         onmouseover="document.getElementById('hoverAudio').play();"
-         onmouseout="document.getElementById('hoverAudio').pause(); document.getElementById('hoverAudio').currentTime = 0;">
+    <img src="Hasherchainsawcandy.png" alt="Candy" id="candyImage" />
+    <audio id="hoverSound" src="Hasher Theme song.mp3" preload="auto"></audio>
   </div>
 
-  <!-- Main Title Text -->
+  <!-- Glitch Text -->
   <div class="glitchstab">
     W<span class="drip">E</span>LCOME<br>
     TO THE H<span class="drip">A</span>SHERVERSE<span class="drip">.</span>
@@ -28,3 +22,4 @@
 
 </body>
 </html>
+
