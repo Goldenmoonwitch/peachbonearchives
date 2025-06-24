@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Hasherverse – Agent Entry</title>
-  <link rel="stylesheet" href="hasher-style.css" />
-  <script src="hasher-script.js" defer></script>
+  <meta charset="UTF-8">
+  <title>GlitchStab Grotesque</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .glitchstab {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      letter-spacing: 0.1rem;
+      position: relative;
+      color: #fff;
+      text-align: center;
+      animation: flicker 3s infinite;
+      text-shadow:
+        0 0 5px #e75480,
+        0 0 10px #ff69b4,
+        0 0 20px #e75480,
+        0 0 40px #ff69b4,
+        0 0 80px #e75480;
+    }
+
+    /* Pink Rose Drip Effect */
+    .drip {
+      position: relative;
+      display: inline-block;
+    }
+    .drip::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 20px;
+      background: #e75480;         /* Rose Pink */
+      box-shadow:
+        0 0 8px #ff69b4,
+        0 0 16px #e75480;
+      border-radius: 50%;
+      animation: drip 2s infinite ease-in-out;
+    }
+
+    @keyframes drip {
+      0% { height: 0; opacity: 0; }
+      50% { height: 20px; opacity: 1; }
+      100% { height: 0; opacity: 0; }
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.4;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Centered intro text with blood drip -->
-  <div class="intro-text">
-    <h1>
-      Create your agent profile below.<br>
-      Blood optional<span class="drip">.</span>
-    </h1>
+  <div class="glitchstab">
+    W<span class="drip">E</span>LCOME<br>
+    TO THE H<span class="drip">A</span>SHERVERSE<span class="drip">.</span>
   </div>
-
 </body>
 </html>
-
