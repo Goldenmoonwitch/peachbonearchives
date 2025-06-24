@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-/* General Layout */
 body {
   background: #000;
   color: #fff;
@@ -10,15 +9,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Move content towards top */
   font-family: 'Playfair Display', serif;
 }
 
-/* Intro Text Styling */
 .intro-text {
   text-align: center;
-  font-size: 2rem;
+  font-size: 18px;
   color: #fff;
+  margin-top: 80px; /* Spacing from top */
   animation: flicker 3s infinite;
   text-shadow:
     0 0 5px #ff00cc,
@@ -26,16 +25,10 @@ body {
     0 0 20px #00ffff,
     0 0 40px #ff00cc,
     0 0 80px #00ffff;
-}
-
-/* Dripping effect on specific span, not whole h1 */
-.drip {
   position: relative;
-  display: inline-block;
-  color: #fff;
 }
 
-.drip::after {
+.intro-text h1::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -51,23 +44,12 @@ body {
   animation: drip 2.5s infinite ease-in-out;
 }
 
-/* Drip animation */
 @keyframes drip {
-  0% {
-    height: 0;
-    opacity: 0;
-  }
-  50% {
-    height: 20px;
-    opacity: 1;
-  }
-  100% {
-    height: 0;
-    opacity: 0;
-  }
+  0%   { height: 0; opacity: 0; }
+  50%  { height: 20px; opacity: 1; }
+  100% { height: 0; opacity: 0; }
 }
 
-/* Flicker animation */
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     opacity: 1;
@@ -76,4 +58,3 @@ body {
     opacity: 0.4;
   }
 }
-
