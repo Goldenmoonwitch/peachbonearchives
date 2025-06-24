@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-/* Page Base Layout */
 body {
   background: #000;
   color: #fff;
@@ -14,7 +13,7 @@ body {
   position: relative;
 }
 
-/* Main Text */
+/* Glowing Main Text */
 .glitchstab {
   font-size: 3rem;
   letter-spacing: 0.1rem;
@@ -43,7 +42,7 @@ body {
   transform: translateX(-50%);
   width: 6px;
   height: 20px;
-  background: #e75480; /* Pink rose */
+  background: #e75480;
   box-shadow:
     0 0 8px #ff69b4,
     0 0 16px #e75480;
@@ -51,23 +50,41 @@ body {
   animation: drip 2s infinite ease-in-out;
 }
 
-/* Side Image Styling */
+/* Yellow Glow for Candy Icon */
 .side-image {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 5;
+  background: #111;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow:
+    0 0 6px #ffd700,
+    0 0 12px #fff68f,
+    0 0 24px #ffcc00;
+  transition: all 0.3s ease-in-out;
 }
 
 .side-image img {
-  width: 120px;
+  width: 90px;
   height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.side-image:hover {
+  box-shadow:
+    0 0 12px #ffd700,
+    0 0 28px #fff68f,
+    0 0 45px #ffcc00;
 }
 
 .side-image img:hover {
   transform: scale(1.1);
+  filter: brightness(1.4) drop-shadow(0 0 5px #ffcc00);
 }
 
 /* Animations */
@@ -85,10 +102,3 @@ body {
     opacity: 0.4;
   }
 }
-ss="glitchstab">
-    W<span class="drip">E</span>LCOME<br>
-    TO THE H<span class="drip">A</span>SHERVERSE<span class="drip">.</span>
-  </div>
-</body>
-</html>
-
