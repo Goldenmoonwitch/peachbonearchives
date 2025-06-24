@@ -6,26 +6,37 @@ body {
   font-family: 'Playfair Display', serif;
   margin: 0;
   padding: 0;
-  text-align: center;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  position: relative;
 }
 
-.agent-intro h1 {
-  font-size: 18px;
+/* Intro text floats near top-left */
+.intro-text {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  text-align: left;
+}
+
+.intro-text h1,
+.intro-text h2 {
+  font-size: 1.2rem;
   color: #ffccff;
   text-shadow: 0 0 5px #ff00cc, 0 0 10px #00ffff;
-  margin-bottom: 30px;
+  margin: 0.5rem 0;
 }
 
+/* Card stays centered below */
 .agent-card img {
   width: 300px;
   max-width: 90%;
   border-radius: 10px;
   box-shadow: 0 0 20px #00ffff;
 }
+
 
 
