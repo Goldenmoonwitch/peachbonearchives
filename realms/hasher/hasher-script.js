@@ -3,21 +3,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Hasherverse script loaded. Stay sharp, agent.");
 
-  // Optional: Glitch hover pulse on title
+  // Glitch hover pulse on title (pink rose colors)
   const title = document.querySelector(".glitchstab");
   if (title) {
     title.addEventListener("mouseover", () => {
       title.style.textShadow =
-        "0 0 5px #ff00cc, 0 0 15px #00ffff, 0 0 25px #ff00cc, 0 0 35px #00ffff";
+        "0 0 10px #e75480, 0 0 24px #ff69b4, 0 0 40px #e75480, 0 0 70px #ff69b4";
     });
 
     title.addEventListener("mouseout", () => {
       title.style.textShadow =
-        "0 0 5px #ff00cc, 0 0 10px #ff00cc, 0 0 20px #00ffff, 0 0 40px #ff00cc, 0 0 80px #00ffff";
+        "0 0 5px #e75480, 0 0 10px #ff69b4, 0 0 20px #e75480, 0 0 40px #ff69b4, 0 0 80px #e75480";
     });
   }
 
-  // Placeholder for future agent form submission logic
+  // Placeholder for future agent form logic
   const agentForm = document.getElementById("agent-form");
   if (agentForm) {
     agentForm.addEventListener("submit", (e) => {
