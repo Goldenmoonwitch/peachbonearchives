@@ -12,6 +12,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
 
     .glitchstab {
@@ -43,7 +44,7 @@
       transform: translateX(-50%);
       width: 6px;
       height: 20px;
-      background: #e75480;         /* Rose Pink */
+      background: #e75480;
       box-shadow:
         0 0 8px #ff69b4,
         0 0 16px #e75480;
@@ -65,12 +66,39 @@
         opacity: 0.4;
       }
     }
+
+    /* Hasher candy image on left */
+    .side-image {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .side-image img {
+      width: 110px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .side-image img:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
+
+  <!-- Hasher Image on Left -->
+  <div class="side-image">
+    <img src="Hasherchainsawcandy.png" alt="Hasher Candy" id="hasherImage" />
+  </div>
+
+  <!-- Main Title in Center -->
   <div class="glitchstab">
     W<span class="drip">E</span>LCOME<br>
     TO THE H<span class="drip">A</span>SHERVERSE<span class="drip">.</span>
   </div>
+
 </body>
 </html>
