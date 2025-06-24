@@ -29,8 +29,8 @@ body {
         position: relative;
 }
 
-/* Drip effect (applies to h1 or h2 if given class) */
-.drip::after {
+/* Apply blood drip to h1 automatically */
+.intro-text h1::after {
         content: '';
         position: absolute;
         left: 50%;
@@ -38,12 +38,12 @@ body {
         transform: translateX(-50%);
         width: 6px;
         height: 20px;
-        background: #ff00cc;
+        background: #ff0033;
         box-shadow:
-                0 0 3px #00ffff,
-                0 0 6px #00ffff;
+                0 0 3px #cc0000,
+                0 0 6px #cc0000;
         border-radius: 50%;
-        animation: drip 2s infinite ease-in-out;
+        animation: drip 2.5s infinite ease-in-out;
 }
 
 /* Drip animation */
@@ -71,4 +71,3 @@ body {
                 opacity: 0.4;
         }
 }
-
