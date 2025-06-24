@@ -1,25 +1,23 @@
-// hasher-script.js
-
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Hasherverse script loaded.");
+  const candyImage = document.getElementById("hasher-icon");
+  const themeAudio = document.getElementById("hasher-audio");
 
-  const candy = document.querySelector(".side-image img");
-  const audio = new Audio("audio/hasher-theme.mp3");
-
-  if (candy) {
-    candy.addEventListener("mouseenter", () => {
-      audio.currentTime = 0;
-      audio.play();
+  if (candyImage && themeAudio) {
+    // Play audio on hover
+    candyImage.addEventListener("mouseenter", () => {
+      themeAudio.currentTime = 0;
+      themeAudio.play();
     });
 
-    candy.addEventListener("mouseleave", () => {
-      audio.pause();
-      audio.currentTime = 0;
+    // Stop audio on mouse leave
+    candyImage.addEventListener("mouseleave", () => {
+      themeAudio.pause();
+      themeAudio.currentTime = 0;
     });
 
-    candy.addEventListener("click", () => {
-      window.location.href = "https://goldenmoonwitch.github.io/realms/hasher/"; // Change if needed
+    // Open hasher site on click (replace with your link)
+    candyImage.addEventListener("click", () => {
+      window.location.href = "/realms/hasher/index.html";
     });
   }
 });
-
