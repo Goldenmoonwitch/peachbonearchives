@@ -1,42 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
 body {
-  background: #000;
+  background-color: #000;
   color: #fff;
   font-family: 'Playfair Display', serif;
   margin: 0;
   padding: 0;
   height: 100vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px 60px;
 }
 
-/* Intro text floats near top-left */
+/* Intro text at top-left */
 .intro-text {
-  position: absolute;
-  top: 40px;
-  left: 60px;
   text-align: left;
 }
 
 .intro-text h1,
 .intro-text h2 {
-  font-size: 1.2rem;
+  font-size: 18px;
+  margin: 0.5em 0;
   color: #ffccff;
-  text-shadow: 0 0 5px #ff00cc, 0 0 10px #00ffff;
-  margin: 0.5rem 0;
+  text-shadow: 
+    0 0 5px #ff00cc,
+    0 0 10px #00ffff;
 }
-
-/* Card stays centered below */
-.agent-card img {
-  width: 300px;
-  max-width: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #00ffff;
-}
-
 
 
