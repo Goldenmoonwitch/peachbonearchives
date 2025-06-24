@@ -13,6 +13,7 @@ body {
   position: relative;
 }
 
+/* Glitch Title */
 .glitchstab {
   font-size: 3rem;
   letter-spacing: 0.1rem;
@@ -26,6 +27,7 @@ body {
     0 0 80px #e75480;
 }
 
+/* Drip Style */
 .drip {
   position: relative;
   display: inline-block;
@@ -47,6 +49,7 @@ body {
   animation: drip 2s infinite ease-in-out;
 }
 
+/* Candy Image Styling */
 .side-image {
   position: absolute;
   left: 20px;
@@ -56,13 +59,10 @@ body {
 
 .side-image img {
   width: 120px;
-  height: auto;
-  border-radius: 10px;
-  background-color: #000;
-  padding: 5px;
-  box-shadow: 0 0 15px #ffd700, 0 0 30px #ffec8b;
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 0 15px gold;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .side-image img:hover {
