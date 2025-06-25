@@ -1,17 +1,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const candy = document.getElementById("candy");
-  const audio = document.getElementById("hasher-audio");
+  const candyIcon = document.getElementById("candy-icon");
+  const hoverAudio = document.getElementById("hover-audio");
 
-  if (candy && audio) {
-    candy.addEventListener("mouseenter", () => {
-      audio.currentTime = 0;
-      audio.play();
+  if (candyIcon && hoverAudio) {
+    candyIcon.addEventListener("mouseenter", () => {
+      hoverAudio.currentTime = 0;
+      hoverAudio.play();
     });
 
-    candy.addEventListener("mouseleave", () => {
-      audio.pause();
-      audio.currentTime = 0;
+    candyIcon.addEventListener("mouseleave", () => {
+      hoverAudio.pause();
+      hoverAudio.currentTime = 0;
     });
   }
 });
