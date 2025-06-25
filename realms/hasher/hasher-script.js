@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const candy = document.getElementById("candyImage");
-  const sound = document.getElementById("hoverSound");
+  const candy = document.getElementById("candyIcon");
+  const audio = document.getElementById("hoverAudio");
 
-  if (candy && sound) {
+  if (candy && audio) {
     candy.addEventListener("mouseenter", () => {
-      sound.currentTime = 0;
-      sound.play();
+      audio.currentTime = 0;
+      audio.play();
     });
 
     candy.addEventListener("mouseleave", () => {
-      sound.pause();
-      sound.currentTime = 0;
+      audio.pause();
+      audio.currentTime = 0;
     });
   }
 });
