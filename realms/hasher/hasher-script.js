@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (candyIcon && hoverAudio) {
     candyIcon.addEventListener("mouseenter", () => {
-      hoverAudio.currentTime = 0;
+      hoverAudio.currentTime = 30;
       hoverAudio.play();
     });
 
     candyIcon.addEventListener("mouseleave", () => {
       hoverAudio.pause();
-      hoverAudio.currentTime = 0;
+      hoverAudio.currentTime = 30;
     });
   }
 });
