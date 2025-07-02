@@ -6,12 +6,17 @@
   <title>Hasherverse</title>
   <link rel="stylesheet" href="hasher-style.css" />
 </head>
-  <audio id="hover-audio" src="audio/hasher-ad.mp3" preload="auto"></audio>
 <body>
-  <!-- Candy Icon -->
+  <!-- Candy Icon with hover music -->
   <div class="side-image">
-    <img src="Hasherchainsawcandy.png" alt="Candy" id="candy-icon" />
+    <img src="assets/Hasherchainsawcandy.png" alt="Candy" id="candy-icon" />
   </div>
+
+  <!-- Hidden Audio Player -->
+  <audio id="hover-audio" preload="auto">
+    <source src="Hasher ad.mp3#t=30,58" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
   <!-- Glitchstab Title -->
   <div class="glitchstab">
@@ -22,4 +27,3 @@
   <script src="hasher-script.js"></script>
 </body>
 </html>
-
