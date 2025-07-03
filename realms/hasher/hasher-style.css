@@ -80,3 +80,23 @@ body {
   transform: scale(1.1);
 }
 
+.right-image {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-image img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px #00ffff;
+  transition: transform 0.3s ease;
+}
+
+.right-image img:hover {
+  transform: scale(1.1);
+}
+
