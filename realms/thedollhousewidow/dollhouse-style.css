@@ -23,15 +23,15 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.92; /* Makes the background hue show through */
+  opacity: 0.92;
   z-index: 1;
 }
 
-.patchwork-title {
+.svg-title {
   position: absolute;
   top: 5%;
-  width: 80%;
-  max-width: 700px;
+  width: 90%;
+  max-width: 1000px;
   z-index: 2;
   pointer-events: none;
 }
