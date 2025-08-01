@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #3d1c40 0%, #6a3c91 50%, #8e56c2 100%);
+  background-attachment: fixed;
+  font-family: 'Libre Baskerville', serif;
+  color: #e0d8d2;
+  overflow: hidden;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mirror-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.92; /* Makes the background hue show through */
+  z-index: 1;
+}
+
+.patchwork-title {
+  position: absolute;
+  top: 5%;
+  width: 80%;
+  max-width: 700px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.subtitle-text {
+  position: absolute;
+  bottom: 5%;
+  font-size: 1.2rem;
+  color: #dcb8ec;
+  font-style: italic;
+  text-shadow: 0 0 10px #3e3042;
+  z-index: 3;
+}
