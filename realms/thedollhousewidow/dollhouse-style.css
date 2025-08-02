@@ -31,6 +31,19 @@ body {
   z-index: 1;
 }
 
+/* === Mirror Hover Wrapper === */
+.mirror-wrapper {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  transition: transform 0.8s ease;
+}
+
+.mirror-wrapper:hover {
+  transform: scale(1.02) rotateZ(0.6deg) translateY(-2px);
+  filter: drop-shadow(0 0 10px #9a79f7);
+}
+
 /* === Glowing Gothic Title with Flames === */
 .better-title {
   position: absolute;
