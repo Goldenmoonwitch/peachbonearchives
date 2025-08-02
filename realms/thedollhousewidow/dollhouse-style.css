@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 
+/* === Background & Layout === */
 body {
   margin: 0;
   background: linear-gradient(180deg, #3d1c40 0%, #6a3c91 50%, #8e56c2 100%);
@@ -18,6 +19,7 @@ body {
   overflow: hidden;
 }
 
+/* === Mirror Image === */
 .mirror-image {
   width: 100vw;
   height: 100vh;
@@ -29,7 +31,7 @@ body {
   z-index: 1;
 }
 
-/* 🔥 New full glowing title */
+/* === Glowing Title === */
 .better-title {
   position: absolute;
   top: 8%;
@@ -43,12 +45,14 @@ body {
   font-size: 4.2rem;
   letter-spacing: 0.2em;
   color: #e4ffe8;
-  text-shadow: 0 0 10px #59f391, 0 0 25px #2bfa77;
+  text-shadow: 
+    0 0 10px #59f391,
+    0 0 25px #2bfa77;
   -webkit-text-stroke: 1px #0b3619;
   margin: 0;
 }
 
-/* Subtitle (reused) */
+/* === Subtitle Under Title === */
 .subtitle-text {
   font-size: 1.1rem;
   color: #dcb8ec;
