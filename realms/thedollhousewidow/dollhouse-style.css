@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
 body {
   margin: 0;
   background: linear-gradient(180deg, #3d1c40 0%, #6a3c91 50%, #8e56c2 100%);
@@ -27,21 +29,30 @@ body {
   z-index: 1;
 }
 
-.svg-title {
+/* 🔥 New full glowing title */
+.better-title {
   position: absolute;
-  top: 5%;
-  width: 90%;
-  max-width: 1000px;
-  z-index: 2;
-  pointer-events: none;
+  top: 8%;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
 }
 
+.better-title h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 4.2rem;
+  letter-spacing: 0.2em;
+  color: #e4ffe8;
+  text-shadow: 0 0 10px #59f391, 0 0 25px #2bfa77;
+  -webkit-text-stroke: 1px #0b3619;
+  margin: 0;
+}
+
+/* Subtitle (reused) */
 .subtitle-text {
-  position: absolute;
-  bottom: 5%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #dcb8ec;
   font-style: italic;
   text-shadow: 0 0 10px #3e3042;
-  z-index: 3;
+  margin-top: 0.5em;
 }
