@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>The Dollhouse Widow</title>
   <link rel="stylesheet" href="dollhouse-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="page-container">
@@ -11,60 +12,15 @@
     <!-- Mirror Door Background -->
     <img src="The mirror door.jpg" alt="The Mirror Door" usemap="#mirrormap" class="mirror-image" />
 
-    <!-- LIVE SVG TITLE -->
-    <div class="svg-title">
-      <svg viewBox="0 0 1600 300" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <!-- Porcelain Scale Fill -->
-          <pattern id="scales" patternUnits="userSpaceOnUse" width="20" height="20">
-            <path d="M10,0 Q20,10 10,20 Q0,10 10,0" fill="#207d4c" stroke="#0f3" stroke-width="0.5"/>
-          </pattern>
-
-          <!-- Gooey Melt Filter -->
-          <filter id="meltyGoo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
-            <feColorMatrix in="blur" mode="matrix"
-              values="1 0 0 0 0  
-                      0 1 0 0 0  
-                      0 0 1 0 0  
-                      0 0 0 20 -8" result="goo" />
-            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-          </filter>
-
-          <!-- Purple Flame Blur -->
-          <filter id="flameBlur">
-            <feGaussianBlur stdDeviation="6" />
-          </filter>
-        </defs>
-
-        <!-- Optional: Purple Flame Background Glow -->
-        <g filter="url(#flameBlur)">
-          <path d="M150 60 C140 20, 180 20, 170 60" fill="#a855f7"/>
-          <path d="M520 60 C510 25, 550 25, 540 60" fill="#a855f7"/>
-          <path d="M960 60 C950 25, 990 25, 980 60" fill="#a855f7"/>
-        </g>
-
-        <!-- Melting Patchwork Title -->
-        <text x="50" y="190"
-              font-size="120"
-              font-weight="bold"
-              fill="url(#scales)"
-              filter="url(#meltyGoo)"
-              font-family="serif"
-              letter-spacing="10">
-          THE DOLLHOUSE WIDOW
-        </text>
-      </svg>
-    </div>
-
-    <!-- Subtitle Text -->
-    <div class="subtitle-text">
-      A war-torn memory. A broken house. A door that shouldn't open.
+    <!-- Glowing Gothic Title -->
+    <div class="better-title">
+      <h1>The Dollhouse Widow</h1>
+      <p class="subtitle-text">A war-torn memory. A broken house. A door that shouldn't open.</p>
     </div>
 
     <!-- Clickable Mirror Area -->
     <map name="mirrormap">
-      <!-- Adjust coordinates as needed -->
+      <!-- Adjust coordinates if needed -->
       <area shape="circle" coords="720,380,80" href="story.html" alt="Enter the Realm" />
     </map>
 
